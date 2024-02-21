@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+    height: 900px;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+h2.titulo{
+    color:#0173a1;
+    font-family: "Merriweather", serif;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*Cebeçario*/
+/*Pading para espaçar a parte de cima*/
+header{
+    height: 100px;
+    padding: 3px;
+    background-color: #0173a1;
+}
+
+/*Espaço do cabeçario*/
+header >.interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Cor das palavras*/
+header a{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    display:inline-block;
+    transition: .2s;
+}
+/*Para dar um tipo de zoom */
+header a:hover{
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    position:static;
+    gap: 200px;
+}
+
+header nav ul li{
+    display: inline-block;
+    cursor: pointer;
+}
+/*Estilo do Butão*/
+header .btn button{
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position:relative;
+    cursor: pointer;
+}
+/*Icon do Butão*/
+.btn button .icon{
+    color: #000;
+    font-size: 25px;
+    transition: .2s;
+    padding-right: 5px;
+}
+/*Texto do Butão*/
+.btn button .text{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #000;
+    transform: scale(0);
+    transition: .2s;
+    transition-delay: .1s;
+}
+/*Animação de troca do butão */
+.btn button:hover .text{
+    transform: scale(1);
+}
+
+.btn button:hover .icon{
+    transform: scale(0);
+}
+
+.btn button::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px #ffffff52;
+}
+
+.btn button:hover::before{
+    opacity: 1;
+}
+.btn button span{
+    position: absolute;
+}
+/*Estilo do Butão*/
+
+
+/*Estilo do alto do site*/
+.alto-site{
+    padding: 40px;
+}
+
+.alto-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap:90px;
+}
+
+.alto-site h1{
+    color:#0173a1;
+    font-family: "Merriweather", serif;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+.alto-site .text-alto p{
+    color:#000;
+    margin: 20px 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+.alto-site .btn button{
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position:relative;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+/*Animação da imagem do alto do site*/
+.alto-site .img-alto img{
+    position: relative;
+    /*O nome da animação, o tempo, a velocidade, para ficar a funcionar infinitamente, 
+    para fazer ela ficar suave*/
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+/*Para a animação da imagem*/
+@keyframes flutuar{
+    0%{
+        top:0;
+    }
+    100%{
+        top: 7px;
+    }
+}
+
+/*Estilo das serviço-box*/
+.Servico{
+    padding: 40px 4%;
+}
+
+.Servico .flex{
+    gap:60px;
+}
+.Servico .servico-box{
+    color: #000;
+    padding: 40px;
+    border: 1px solid #000;
+    margin-top: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.Servico .servico-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #00000069;
+}
+
+.Servico .servico-box i{
+    font-size: 70px;
+    color:#0139a1;
+}
+.Servico .servico-box h3{
+    font-size: 35px;
+    margin: 15px 0;
+    text-align: left;
+}
+/*Estilo sobre*/
+.sobre{
+    padding: 40px 4%;
+}
+.sobre .flex{
+    align-items: center;
+    gap:60px;
+}
+.sobre .text-sobre{
+    color:#000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+.sobre .text-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .text-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+.sobre .img-sobre img{
+    border-radius: 20px;
+}
+
+.sobre .btn button{
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position:relative;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        transform: scale(1.05);}
+}
